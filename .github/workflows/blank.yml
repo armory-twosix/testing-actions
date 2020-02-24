@@ -1,8 +1,9 @@
 name: CI
 
 on:
-   release:
-    types: [edited]
+  repository_dispatch:
+    types: [build-and-release]
+
 
 jobs:
   build:
