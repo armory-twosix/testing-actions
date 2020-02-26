@@ -10,5 +10,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.client_payload.branch }}
     - name: Run a one-line script
-      run: echo Hello, world!
+      run: echo ${{ github.event.client_payload.text }}
