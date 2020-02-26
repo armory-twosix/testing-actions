@@ -1,8 +1,5 @@
 name: CI
-
-on:
-  repository_dispatch:
-    types: [build-and-release]
+on: ['deployment']
 
 
 jobs:
